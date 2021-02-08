@@ -1,28 +1,28 @@
-const makePizza = function () {
-  console.log("Make dough");
-  console.log("Flatten the dough");
-  console.log("Put tomato sauce, cheese, peppers and mushrooms on it");
-  console.log("Put the pizza in the oven for 20 minutes at 180 degrees");
-  console.log("");
+// No arguments
+
+const paintWallRed = function () {
+  console.log("The wall has been painted red")
 }
-const makeSushi = function () {
-  console.log("Prep the Rice & Nori");
-  console.log("Spread the Rice on the Nori");
-  console.log("Add Fillings to the Bottom Quarter of the Nori");
-  console.log("Roll the Sushi Part Way");
-  console.log("Roll the Sushi the Rest of the Way");
-  console.log("Move to Cutting Board");
-  console.log("Cut the Sushi");
-  console.log("Serve...");
-  console.log("");
+paintWallRed();
+
+// Single argument
+
+const paintWall = function (item) {
+  console.log("The wall has been painted", item)
+}
+paintWall("green");
+paintWall("blue");
+
+// Multiple arguments
+
+const northWall = "The north wall has been painted"
+const southeastWall = "The south-east wall has been painted"
+const paintWallOrange = function (item) {
+  console.log(northWall, item);
+}
+const paintWallGrey = function (item) {
+  console.log(southeastWall, item);
 }
 
-makeSushi();
-makeSushi();
-makeSushi();
-makePizza();
-makePizza();
-
-
-
-
+paintWallOrange("orange");
+paintWallGrey("grey");
