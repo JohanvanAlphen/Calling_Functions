@@ -1,40 +1,59 @@
-// // Function declaration
-
-function multiply1(number1, number2) {
-  sum1 = Math.pow(number1, 2);
-  sum2 = Math.pow(number2, 2);
-  total1 = (sum1 + sum2);
-  total2 = total1 * total1;
-  console.log(total2);
-
-  //console.log(((number1 * number1) + (number2 * number2)) * ((number1 * number1) + (number2 * number2)));
-}
-
-multiply1(2, 3);
-
-
-// // Function expression
-
-const multiply2 = function (number1, number2) {
-  sum1 = Math.pow(number1, 2);
-  sum2 = Math.pow(number2, 2);
-  total1 = (sum1 + sum2);
-  total2 = total1 * total1;
-  console.log(total2);
-
-  //console.log(((number1 * number1) + (number2 * number2)) * ((number1 * number1) + (number2 * number2)));
+// Hey Kiddo
+const ageOver18 = function (number) {
+  console.log("Your age is", number);
+  if (number >= 18) {
+    return true
+  } else
+    return false
 };
 
-multiply2(3, 4);
+const checkAge = function (number) {
+  const adultAge = ageOver18(number)
+  if (number >= 18) {
+    return "Hello there"
+  } else
+    return "Hey kiddo"
+};
+console.log(checkAge(16));
 
-// Arrow function
-const multiply3 = (number1, number2) => {
-  sum1 = Math.pow(number1, 2);
-  sum2 = Math.pow(number2, 2);
-  total1 = (sum1 + sum2);
-  total2 = total1 * total1;
-  console.log(total2);
+// VAT calculations Excercise 1
+
+const calculateIncVAT = function (number) {
+  console.log("Your price ex VAT is", number);
+  const incLowVAT = (number * 1.09);
+  console.log("Your price including low VAT is", incLowVAT.toFixed(2));
+  const incHighVAT = (number * 1.21);
+  console.log("Your price including high VAT is", incHighVAT.toFixed(2));
 }
-//const multiply3 = (number1, number2) => console.log(((number1 * number1) + (number2 * number2)) * ((number1 * number1) + (number2 * number2)));;
+calculateIncVAT(1000);
 
-multiply3(7, 8);
+const calculateExVAT = function (number) {
+  console.log("Your price including VAT is", number);
+  const totalExLowVAT = (number / 1.09);
+  console.log("Your price ex low VAT is", totalExLowVAT.toFixed(2));
+  const exLowVAT = (number - totalExLowVAT);
+  console.log("Your VAT amount is", exLowVAT.toFixed(2));
+  const totalExHighVAT = (number / 1.21);
+  console.log("Your price ex high VAT is", totalExHighVAT.toFixed(2));
+  const exHighVAT = (number - totalExHighVAT);
+  console.log("Your VAT amount is", exHighVAT.toFixed(2));
+
+}
+calculateExVAT(1210);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
